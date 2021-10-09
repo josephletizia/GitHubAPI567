@@ -27,7 +27,7 @@ def repo_count(u):
             print("Commits: "+str(commitCount))
             print()
             output[repo['name']] = len(commits)
-    
+        #print(len(commits))
     return output
 
 repo_count('josephletizia')
