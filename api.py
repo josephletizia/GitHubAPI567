@@ -8,6 +8,8 @@ import requests
 
 def repo_count(u):
 
+    output = {}
+
     if(type(u) != str):
         return "Not a valid input for the user"
 
@@ -24,6 +26,8 @@ def repo_count(u):
             print("Repo Name: "+repo['name'])
             print("Commits: "+str(commitCount))
             print()
+            output[repo['name']] = len(commits)
+    
+    return output
 
-
-# repo_count('josephletizia')
+repo_count('josephletizia')
